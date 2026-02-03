@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Parser AI</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        input[type="file"], input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <h2>Upload Your Resume</h2>
+  <form id="resumeForm">
+    <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="number" id="phone" placeholder="Phone">
+    <input type="text" id="experience" placeholder="Total Experience">
+    <input type="text" id="skills" placeholder="Technical Skills">
+    <button type="button" onclick="dummyFill()">Auto-Fill (Dummy)</button>
+  </form>
+</div>
+
+<script>
+        function dummyFill() {
+            document.getElementById('name').value = "John Doe";
+            document.getElementById('email').value = "john@example.com";
+            document.getElementById('phone').value = "9876543210";
+            document.getElementById('experience').value = "3 years";
+            document.getElementById('skills').value = "Java, Spring Boot, SQL";
+            alert("Fields filled with dummy data!");
+        }
+    </script>
+</body>
+</html>
